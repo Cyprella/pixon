@@ -1,9 +1,9 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2017-2018 The Nyx Core developers
+// Copyright (c) 2017-2018 The Pixon Core developers
 
 #include "cachemap.h"
 
-#include "test/test_nyx.h"
+#include "test/test_pixon.h"
 
 #include <boost/test/unit_test.hpp>
 

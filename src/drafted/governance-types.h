@@ -16,9 +16,9 @@ enum GovernanceObjectType {
     ValueOverride = 1, 
 
     // -------------------------------
-    // NyxNetwork - is the root node
-    NyxNetwork = 1000,
-    NyxNetworkVariable = 1001,
+    // PixonNetwork - is the root node
+    PixonNetwork = 1000,
+    PixonNetworkVariable = 1001,
     Category = 1002,
 
     // Actors

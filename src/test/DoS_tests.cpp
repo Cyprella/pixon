@@ -13,7 +13,7 @@
 #include "serialize.h"
 #include "util.h"
 
-#include "test/test_nyx.h"
+#include "test/test_pixon.h"
 
 #include <stdint.h>
 

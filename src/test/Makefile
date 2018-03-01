@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. nyx_test
+	$(MAKE) -C .. pixon_test
 clean:
-	$(MAKE) -C .. nyx_test_clean
+	$(MAKE) -C .. pixon_test_clean
 check:
-	$(MAKE) -C .. nyx_test_check
+	$(MAKE) -C .. pixon_test_check

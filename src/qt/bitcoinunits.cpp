@@ -1,6 +1,6 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2017-2018 The Nyx Core developers
+// Copyright (c) 2017-2018 The Pixon Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,9 +20,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(NYX);
-    unitlist.append(mNYX);
-    unitlist.append(uNYX);
+    unitlist.append(PXN);
+    unitlist.append(mPXN);
+    unitlist.append(uPXN);
     unitlist.append(nuffs);
     return unitlist;
 }
@@ -31,9 +31,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case NYX:
-    case mNYX:
-    case uNYX:
+    case PXN:
+    case mPXN:
+    case uPXN:
     case nuffs:
         return true;
     default:
@@ -47,9 +47,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case NYX: return QString("NYX");
-            case mNYX: return QString("mNYX");
-            case uNYX: return QString::fromUtf8("μNYX");
+            case PXN: return QString("PXN");
+            case mPXN: return QString("mPXN");
+            case uPXN: return QString::fromUtf8("μPXN");
             case nuffs: return QString("nuffs");
             default: return QString("???");
         }
@@ -58,9 +58,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case NYX: return QString("tNYX");
-            case mNYX: return QString("mtNYX");
-            case uNYX: return QString::fromUtf8("μtNYX");
+            case PXN: return QString("tPXN");
+            case mPXN: return QString("mtPXN");
+            case uPXN: return QString::fromUtf8("μtPXN");
             case nuffs: return QString("tnuffs");
             default: return QString("???");
         }
@@ -73,10 +73,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case NYX: return QString("Nyx");
-            case mNYX: return QString("Milli-Nyx (1 / 1" THIN_SP_UTF8 "000)");
-            case uNYX: return QString("Micro-Nyx (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case nuffs: return QString("Ten Nano-Nyx (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case PXN: return QString("Pixon");
+            case mPXN: return QString("Milli-Pixon (1 / 1" THIN_SP_UTF8 "000)");
+            case uPXN: return QString("Micro-Pixon (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case nuffs: return QString("Ten Nano-Pixon (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -84,10 +84,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case NYX: return QString("TestNyxs");
-            case mNYX: return QString("Milli-TestNyx (1 / 1" THIN_SP_UTF8 "000)");
-            case uNYX: return QString("Micro-TestNyx (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case nuffs: return QString("Ten Nano-TestNyx (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case PXN: return QString("TestPixons");
+            case mPXN: return QString("Milli-TestPixon (1 / 1" THIN_SP_UTF8 "000)");
+            case uPXN: return QString("Micro-TestPixon (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case nuffs: return QString("Ten Nano-TestPixon (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -97,9 +97,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case NYX:  return 100000000;
-    case mNYX: return 100000;
-    case uNYX: return 100;
+    case PXN:  return 100000000;
+    case mPXN: return 100000;
+    case uPXN: return 100;
     case nuffs: return 1;
     default:   return 100000000;
     }
@@ -109,9 +109,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case NYX: return 8;
-    case mNYX: return 5;
-    case uNYX: return 2;
+    case PXN: return 8;
+    case mPXN: return 5;
+    case uPXN: return 2;
     case nuffs: return 0;
     default: return 0;
     }

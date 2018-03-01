@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both nyxd and nyx-qt, to make it harder for attackers to
+ * for both pixond and pixon-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Nyx Core");
+const std::string CLIENT_NAME("Pixon Core");
 
 /**
  * Client version number

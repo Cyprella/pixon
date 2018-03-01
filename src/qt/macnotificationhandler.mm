@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.nyx.Nyx-Qt";
+        return @"org.pixon.Pixon-Qt";
     } else {
         return [self __bundleIdentifier];
     }

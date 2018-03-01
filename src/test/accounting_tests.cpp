@@ -5,7 +5,7 @@
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
 
-#include "test/test_nyx.h"
+#include "test/test_pixon.h"
 
 #include <stdint.h>
 
