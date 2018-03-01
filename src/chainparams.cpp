@@ -63,7 +63,7 @@ public:
         consensus.nSuperblockCycle = 21600;
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 20000;
-        consensus.nMasternodeMinimumConfirmations = 15;
+        consensus.nMasternodeMinimumConfirmations = 5;
         consensus.nMajorityEnforceBlockUpgrade = 750;
         consensus.nMajorityRejectBlockOutdated = 950;
         consensus.nMajorityWindow = 1000;
@@ -92,10 +92,10 @@ public:
          */
         pchMessageStart[0] = 0xaf;
         pchMessageStart[1] = 0x3c;
-        pchMessageStart[2] = 0x7b;
-        pchMessageStart[3] = 0xcc;
+        pchMessageStart[2] = 0x7c;
+        pchMessageStart[3] = 0xc1;
         vAlertPubKey = ParseHex("041d33468b8753a0df3b8ddbd0b64edf0e7e2bbc4996ff7d7ceb32283496d72b40421eff54bf4a223f0af838253114ed27f1661a35086870e7693b52ff040ac641");
-        nDefaultPort = 4330;
+        nDefaultPort = 2330;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
@@ -126,7 +126,7 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
         fMineBlocksOnDemand = false;
@@ -196,7 +196,7 @@ public:
         pchMessageStart[2] = 0xbd;
         pchMessageStart[3] = 0x2c;
         vAlertPubKey = ParseHex("0451c826df9385f36dfd8e23bde24b9fab40aac24521dc1358abd8af6582202fd2faf1b42607f4157039f5e9cd4998e8b74e15819dc601c2c5d748f93683baa4ea");
-        nDefaultPort = 4332;
+        nDefaultPort = 2332;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nPruneAfterHeight = 1000;
 
@@ -297,7 +297,7 @@ public:
         pchMessageStart[2] = 0xd4;
         pchMessageStart[3] = 0xf5;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
-        nDefaultPort = 4334;
+        nDefaultPort = 2334;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1517054400, 3798869, 0x1e0ffff0, 1, 50 * COIN);
